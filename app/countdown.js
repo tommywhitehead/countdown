@@ -36,7 +36,7 @@ angular.module('countdown', [
         ctdn.returnColor = function(number) {
             ctdn.color = ctdn.colors[number-1].color;
             console.log(ctdn.color);
-        }
+        };
 
         ctdn.countDown = function(){
             ctdn.returnColor(ctdn.number);
@@ -49,13 +49,13 @@ angular.module('countdown', [
                 }
             }, 1000);
             ctdn.isCounting = true;
-        }
+        };
 
         ctdn.stopCounting = function(){
             $timeout.cancel(counting);
             ctdn.number = "";
             ctdn.isCounting = false;
-        }
+        };
 
     }])
 
@@ -69,7 +69,7 @@ angular.module('countdown', [
 
                 var testValidity = function(valid) {
                     var isValid = valid;
-                }
+                };
 
                 // DOM to model validation
                 ngModel.$parsers.unshift(function(value) {
@@ -84,8 +84,8 @@ angular.module('countdown', [
                     ngModel.$setValidity('limit', value <= limit && value > 0);
                     testValidity(valid);
                     return value;
-                })
+                });
             }
-        }
+        };
     }])
 ;
