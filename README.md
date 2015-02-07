@@ -1,1 +1,3 @@
-# Countdown — Single Page App Takehome
+# Countdown
+
+Single Page App
