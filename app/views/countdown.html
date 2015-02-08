@@ -1,0 +1,16 @@
+<div id="main">
+
+    <h1 class="title animated fadeIn">CountDown</h1>
+    <p class="desc animated fadeIn">Enter a number between one and twenty.</p>
+
+    <p class="numberCount" style="color:{{color}}" ng-show="isCounting">{{number}}</p>
+
+    <form id="enterNumber" name="enterNumber" ng-submit="countDown()">
+        <p>
+            <input class="numberInput animated flipInX" type="text" maxlength="2" ng-hide="isCounting" ng-model="number" limit="20" required />
+            <button class="btn startBtn" ng-hide="!enterNumber.$valid || isCounting">Start</button>
+            <button class="btn stopBtn" ng-show="isCounting" ng-click="stopCounting()">Stop</button>
+        </p>
+    </form>
+
+</div>

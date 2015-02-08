@@ -1,0 +1,108 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono);
+
+body {
+    font-family: 'Ubuntu Mono', courier, monospace;
+}
+html {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    background: url(resources/bg.jpg);
+}
+#main {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 300px;
+    position: relative;
+}
+h1.title {
+    align-self: center;
+    font-size: 70px;
+    line-height: 1;
+    letter-spacing: -3px;
+    margin: 0;
+    padding: 0;
+    color: #40a9a5;
+    text-shadow: -1px -1px 2px rgba(0,0,0,0.6), 1px 1px 2px rgba(255,255,255,0.2);
+}
+p.numberCount {
+    align-self: center;
+    font-size: 140px;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    text-shadow: -1px -1px 2px rgba(0,0,0,0.3), 1px 1px 2px rgba(255,255,255,0.2);
+}
+p.desc {
+    color: #bed9c5;
+    text-shadow: -1px -1px 2px rgba(0,0,0,0.3), 1px 1px 2px rgba(255,255,255,0.2);
+}
+input.numberInput {
+    align-self: center;
+    width: 100px;
+    padding: 12px 20px;
+    font-size: 30px;
+    line-height: 1;
+    border: 0;
+    border-radius: 7px;
+    text-align: center;
+    color: #bed9c5;
+    background: #1e1e1e;
+    box-shadow: -1px -1px 3px rgba(0,0,0,0.7), 1px 1px 3px rgba(255,255,255,0.2);
+    box-sizing: border-box;
+}
+input.ng-pristine.ng-invalid,
+input.ng-pristine.ng-valid {
+    border: 1px solid transparent;
+}
+input.ng-dirty.ng-invalid {
+    border: 1px solid #EC5845;
+}
+input.ng-dirty.ng-valid {
+    border: 1px solid transparent;
+}
+form#enterNumber {
+    display: flex;
+}
+form#enterNumber p {
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+button.btn {
+    box-sizing: border-box;
+    padding: 8px 8px;
+    width: 100px;
+    border: 0;
+    border-radius: 4px;
+    display: block;
+    background: red;
+    transition: all .1s linear;
+    font-family: 'Ubuntu Mono', courier, monospace;
+    color: #bed9c5;
+    box-shadow: 0 0 transparent;
+    margin-top: 30px;
+}
+button.btn:hover {
+    transition: all .1s linear;
+}
+button.startBtn {
+    background: #409b50;
+}
+button.startBtn:hover {
+    background: #49af5a;
+    box-shadow: 0 3px #2a5331;
+}
+button.stopBtn {
+    background: #c35353;
+}
+button.stopBtn:hover {
+    background: #dc6060;
+    box-shadow: 0 3px #682929;
+}
