@@ -38,13 +38,14 @@ angular.module('twDataRobotTakeHome', [
                 ];
 
                 $scope.returnColor = function(number) {
+                    $scope.returnedNumber = number;
                     $scope.color = $scope.colors[number - 1].color;
                 };
 
                 $scope.countDown = function () {
                     if ($scope.number <= 20) {
                         $scope.returnColor($scope.number);
-                        counting = $timeout(function () {
+                        counting = $timeout(function() {
                             $scope.number--;
                             if ($scope.number > 0) {
                                 $scope.countDown();
@@ -56,29 +57,26 @@ angular.module('twDataRobotTakeHome', [
                     }
                 };
 
-                $scope.stopCounting = function () {
+                $scope.stopCounting = function() {
                     $timeout.cancel(counting);
                     $scope.number = "";
                     $scope.isCounting = false;
                 };
-
-
             }
         };
     })
 
-    .directive('limit', function (){
+    .directive('limit', function(){
         return {
             require: 'ngModel',
             link: function($scope, elem, attr, ngModel) {
 
-                var valid = false;
                 var limit = parseInt(attr.limit);
 
                 // DOM to model validation
                 ngModel.$parsers.unshift(function(value) {
-                    var valid = value <= limit && value > 0;
-                    ngModel.$setValidity('limit', valid);
+                    $scope.isValid = value <= limit && value > 0;
+                    ngModel.$setValidity('limit', $scope.isValid);
                     return value;
                 });
 

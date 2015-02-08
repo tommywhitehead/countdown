@@ -1,7 +1,7 @@
-@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono);
+@import url(http://fonts.googleapis.com/css?family=Cutive+Mono);
 
 body {
-    font-family: 'Ubuntu Mono', courier, monospace;
+    font-family: 'Cutive Mono', courier, monospace;
 }
 html {
     display: flex;
@@ -27,8 +27,8 @@ h1.title {
     letter-spacing: -3px;
     margin: 0;
     padding: 0;
-    color: #40a9a5;
-    text-shadow: -1px -1px 2px rgba(0,0,0,0.6), 1px 1px 2px rgba(255,255,255,0.2);
+    color: #35322f;
+    text-shadow: -1px -1px 2px rgba(0,0,0,0.2), 1px 1px 2px rgba(255,255,255,1);
 }
 p.numberCount {
     align-self: center;
@@ -36,11 +36,12 @@ p.numberCount {
     padding: 0;
     margin: 0;
     line-height: 1;
-    text-shadow: -1px -1px 2px rgba(0,0,0,0.3), 1px 1px 2px rgba(255,255,255,0.2);
+    text-shadow: -1px -1px 3px rgba(0,0,0,0.2), 1px 1px 3px rgba(255,255,255,1);
+    animation: flipInX;
 }
 p.desc {
-    color: #bed9c5;
-    text-shadow: -1px -1px 2px rgba(0,0,0,0.3), 1px 1px 2px rgba(255,255,255,0.2);
+    color: #35322f;
+    text-shadow: -1px -1px 2px rgba(0,0,0,0.2), 1px 1px 2px rgba(255,255,255,1);
 }
 input.numberInput {
     align-self: center;
@@ -49,11 +50,11 @@ input.numberInput {
     font-size: 30px;
     line-height: 1;
     border: 0;
-    border-radius: 7px;
+    border-radius: 3px;
     text-align: center;
-    color: #bed9c5;
-    background: #1e1e1e;
-    box-shadow: -1px -1px 3px rgba(0,0,0,0.7), 1px 1px 3px rgba(255,255,255,0.2);
+    color: #35322f;
+    background: #e9e5dc;
+    box-shadow: -1px -1px 3px rgba(0,0,0,0.2), 1px 1px 3px rgba(255,255,255,1);
     box-sizing: border-box;
 }
 input.ng-pristine.ng-invalid,
@@ -84,8 +85,8 @@ button.btn {
     display: block;
     background: red;
     transition: all .1s linear;
-    font-family: 'Ubuntu Mono', courier, monospace;
-    color: #bed9c5;
+    font-family: 'Cutive Mono', courier, monospace;
+    color: #fff;
     box-shadow: 0 0 transparent;
     margin-top: 30px;
 }
